@@ -1,0 +1,10 @@
+@import "./variables";
+
+.ant-menu-item-selected {
+  background-color: $active-color-menu !important;
+  font-size: 1.2rem !important;
+}
+.ant-menu-vertical .ant-menu-submenu-selected {
+  background-color: $active-color-menu !important;
+  font-size: 1.2rem !important;
+}

@@ -1,0 +1,22 @@
+@import "./fonts/index";
+@import "./helper/antd";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-size: 12px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+body {
+  font-family: "Pretendard Regular", "Pretendard Light", "Pretendard SemiBold", "Pretendard Bold", serif !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  -ms-word-break: break-allc !important;
+  word-break: break-all;
+}
