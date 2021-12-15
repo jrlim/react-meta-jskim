@@ -1,0 +1,41 @@
+@import "styles/helper/variables";
+
+.layout {
+  height: 100vh;
+  &__sider {
+    .logo {
+      background: rgb(255 255 255 / 30%);
+      color: $white;
+      font-weight: blod;
+      height: 32px;
+      line-height: 2.5rem;
+      margin: 16px;
+      text-align: center;
+    }
+  }
+
+  &__main {
+    overflow-y: hidden;
+    padding: 1rem;
+    &__header {
+      background: #fff;
+      display: flex;
+      .icon {
+        color: $background-color-blue;
+        font-size: 1.4rem;
+        margin-left: -2.4rem;
+      }
+      .title {
+        color: $background-color-blue;
+        font-size: 1.4rem;
+        margin-left: 1rem;
+        margin-top: -0.1rem;
+      }
+    }
+    &__content {
+      background: #fff;
+      margin-top: 1rem;
+      overflow: auto;
+    }
+  }
+}
