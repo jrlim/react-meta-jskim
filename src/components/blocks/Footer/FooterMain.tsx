@@ -3,6 +3,8 @@ import { DesktopOutlined, PieChartOutlined, FileOutlined, TeamOutlined, UserOutl
 
 import { Layout } from 'antd';
 
+import Svgs from 'components/atom/Svgs';
+
 import './FooterMain.scss';
 
 const { Footer } = Layout;
@@ -33,16 +35,16 @@ const FooterMain: React.FC = () => {
           gap: '15px'
         }}>
         <div className="MuiBox-root jss28" style={{ cursor: 'pointer' }}>
-          <img src="./static/media/footer-wemix.5e158687.svg" alt="" width="42px" height="42px" />
+          <Svgs iconName="SnsWemix" />
         </div>
         <div className="MuiBox-root jss29" style={{ cursor: 'pointer' }}>
-          <img src="./static/media/footer-tweeter.dc6b07de.svg" alt="" width="42px" height="42px" />
+          <Svgs iconName="SnsTwitter" />
         </div>
         <div className="MuiBox-root jss30" style={{ cursor: 'pointer' }}>
-          <img src="./static/media/footer-medium.4e6776c0.svg" alt="" width="42px" height="42px" />
+          <Svgs iconName="SnsMedium" />
         </div>
         <div className="MuiBox-root jss31" style={{ cursor: 'pointer' }}>
-          <img src="./static/media/footer-telegram.dd985f70.svg" alt="" width="42px" height="42px" />
+          <Svgs iconName="SnsTelegram" />
         </div>
       </div>
       <div className="layout__footer__copyright">Copyright © 2018. WEMADE TREE PTE. LTD. All rights reserved.</div>

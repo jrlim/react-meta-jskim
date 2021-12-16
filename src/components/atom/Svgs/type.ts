@@ -27,4 +27,8 @@ export declare type IConNameType =
 
   // Custom Icon
   | 'WemixLogo'
-  | 'NavShop';
+  | 'NavShop'
+  | 'SnsWemix'
+  | 'SnsTwitter'
+  | 'SnsMedium'
+  | 'SnsTelegram';

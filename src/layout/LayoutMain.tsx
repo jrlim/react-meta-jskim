@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { DesktopOutlined, PieChartOutlined, FileOutlined, TeamOutlined, UserOutlined } from '@ant-design/icons';
 
-import { Layout } from 'antd';
+import { Layout, Menu } from 'antd';
 import { useCommHook } from 'hooks/comm-hook';
 
 import Svgs from 'components/atom/Svgs';
@@ -30,12 +30,23 @@ const LayoutMain: React.FC = () => {
           </div>
           <div className="title">WEMIX DEX</div>
 
-          {/* <div className="layout__main__nav">
-            <div className="">
+          {/* <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
+            <Menu.Item key="1">nav 1</Menu.Item>
+            <Menu.Item key="2">nav 2</Menu.Item>
+            <Menu.Item key="3">nav 3</Menu.Item>
+          </Menu> */}
+
+          <div className="layout__main__nav">
+            {/* <div className="">
               <Svgs iconName="NavShop" />
-            </div>
-            <div className="">SCOPE</div>
-          </div> */}
+            </div> */}
+            {/* <div className="title">SHOP</div>
+            <div className="title">AUCTION</div>
+            <div className="title">STAKING</div>
+            <div className="title">BRIDGE</div>
+            <div className="title">SWAP</div>
+            <div className="title">POOL</div> */}
+          </div>
         </Header>
 
         <Content className="layout__main__content">

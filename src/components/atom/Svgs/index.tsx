@@ -30,6 +30,10 @@ import {
 
 import { ReactComponent as WemixLogo } from 'assets/svgs/wemix-logo.svg';
 import { ReactComponent as NavShop } from 'assets/svgs/nav-shop.svg';
+import { ReactComponent as SnsWemix } from 'assets/svgs/sns-wemix.svg';
+import { ReactComponent as SnsMedium } from 'assets/svgs/sns-medium.svg';
+import { ReactComponent as SnsTwitter } from 'assets/svgs/sns-twitter.svg';
+import { ReactComponent as SnsTelegram } from 'assets/svgs/sns-telegram.svg';
 
 import { IConNameType } from './type';
 
@@ -74,7 +78,11 @@ const Svgs: React.FC<ISvgs> = (props: ISvgs) => {
     const svgIcons = {
       // Custom Icon
       WemixLogo: <WemixLogo className={iconClassName} />,
-      NavShop: <NavShop className={iconClassName} />
+      NavShop: <NavShop className={iconClassName} />,
+      SnsWemix: <SnsWemix className={iconClassName} />,
+      SnsTwitter: <SnsTwitter className={iconClassName} />,
+      SnsMedium: <SnsMedium className={iconClassName} />,
+      SnsTelegram: <SnsTelegram className={iconClassName} />
     };
 
     const icons = { ...antdICons, ...svgIcons };
