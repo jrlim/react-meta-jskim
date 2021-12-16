@@ -1,0 +1,79 @@
+@import "styles/helper/variables";
+
+.layout {
+  height: 100vh;
+  &__sider {
+    .logo {
+      background: rgb(255 255 255 / 30%);
+      color: $white;
+      font-weight: blod;
+      height: 32px;
+      line-height: 2.5rem;
+      margin: 16px;
+      text-align: center;
+    }
+  }
+
+  &__main {
+    overflow-y: hidden;
+    padding: 0rem;
+    &__header {
+      background: $black;
+      display: flex;
+      .icon {
+        color: $background-color-light-green;
+        font-size: 1.4rem;
+        margin-top: -0.1rem;
+        margin-left: -2.4rem;
+        display: flex;
+        align-items: center;
+      }
+      .title {
+        position: static;
+        left: 16.51%;
+        right: 0%;
+        top: 0%;
+        bottom: 0%;
+
+        margin-left: 1rem;
+        margin-top: -0.1rem;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.2px;
+
+        /* --color-white */
+        color: $white;
+
+        /* Inside Auto Layout */
+        flex: none;
+        order: 1;
+        align-self: stretch;
+        flex-grow: 0;
+        margin: 0px 10px;
+      }
+      &__nav {
+        /* Auto Layout */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 11px 20px 9px;
+
+        position: static;
+        width: 122px;
+        height: 60px;
+        left: 0px;
+        top: 0px;
+      }
+    }
+    &__content {
+      background: #fff;
+      margin-top: 1rem;
+      overflow: auto;
+    }
+  }
+}

@@ -23,4 +23,8 @@ export declare type IConNameType =
   | 'WarningOutlined'
   | 'BgColorsOutlined'
   | 'AppstoreOutlined'
-  | 'ConsoleSqlOutlined';
+  | 'ConsoleSqlOutlined'
+
+  // Custom Icon
+  | 'WemixLogo'
+  | 'NavShop';

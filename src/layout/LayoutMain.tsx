@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import { DesktopOutlined, PieChartOutlined, FileOutlined, TeamOutlined, UserOutlined } from '@ant-design/icons';
 
-import { Layout, Menu } from 'antd';
+import { Layout } from 'antd';
 import { useCommHook } from 'hooks/comm-hook';
 
 import Svgs from 'components/atom/Svgs';
 
-import './index.scss';
+import FooterMain from 'components/blocks/Footer/FooterMain';
 
-export const { Header, Sider, Content } = Layout;
-export const { SubMenu } = Menu;
+import './LayoutMain.scss';
 
-const WebMain: React.FC = () => {
+export const { Header, Content } = Layout;
+
+const LayoutMain: React.FC = () => {
   const [collapsed, setCollapsed] = useState<boolean>(false);
 
   const { FetchRouter } = useCommHook();
@@ -25,16 +26,26 @@ const WebMain: React.FC = () => {
       <Layout className="layout__main">
         <Header className="layout__main__header">
           <div className="icon">
-            <Svgs iconName="AccountBookOutlined" />
+            <Svgs iconName="WemixLogo" />
           </div>
-          <div className="title">경영정보</div>
+          <div className="title">WEMIX DEX</div>
+
+          {/* <div className="layout__main__nav">
+            <div className="">
+              <Svgs iconName="NavShop" />
+            </div>
+            <div className="">SCOPE</div>
+          </div> */}
         </Header>
+
         <Content className="layout__main__content">
-          <div style={{ padding: 24, minHeight: 360 }}>Bill is a cat.</div>
+          <div style={{ padding: 24, minHeight: 360 }}>MAIN CONTENT</div>
         </Content>
+
+        <FooterMain />
       </Layout>
     </Layout>
   );
 };
 
-export default WebMain;
+export default LayoutMain;

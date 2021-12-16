@@ -1,4 +1,5 @@
 import React, { useCallback } from 'react';
+
 import {
   DownOutlined,
   UpOutlined,
@@ -27,16 +28,21 @@ import {
   ConsoleSqlOutlined
 } from '@ant-design/icons';
 
+import { ReactComponent as WemixLogo } from 'assets/svgs/wemix-logo.svg';
+import { ReactComponent as NavShop } from 'assets/svgs/nav-shop.svg';
+
 import { IConNameType } from './type';
 
 interface ISvgs {
   iconName: IConNameType;
+  iconClassName?: string;
+  onClick?: React.MouseEventHandler<HTMLSpanElement>;
 }
 
 const Svgs: React.FC<ISvgs> = (props: ISvgs) => {
-  const { iconName } = props;
+  const { iconName, iconClassName, onClick } = props;
 
-  const getIcon = useCallback((iconName: string) => {
+  const getIcon = useCallback((iconName: string, iconClassName?: string) => {
     const antdICons = {
       DownOutlined: <DownOutlined />,
       UpOutlined: <UpOutlined />,
@@ -65,7 +71,11 @@ const Svgs: React.FC<ISvgs> = (props: ISvgs) => {
       ConsoleSqlOutlined: <ConsoleSqlOutlined />
     };
 
-    const svgIcons = {};
+    const svgIcons = {
+      // Custom Icon
+      WemixLogo: <WemixLogo className={iconClassName} />,
+      NavShop: <NavShop className={iconClassName} />
+    };
 
     const icons = { ...antdICons, ...svgIcons };
 
