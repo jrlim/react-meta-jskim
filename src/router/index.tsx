@@ -6,7 +6,7 @@ import Loading from 'components/atom/Loding';
 
 import LoginPage from 'components/pages/Login';
 import WebMainPage from 'components/blocks/WebMain';
-import LayoutMain from 'layout/LayoutMain';
+import LayoutMain from 'components/layout/LayoutMain';
 
 import DashboardOperation from 'components/pages/DashboardOperation';
 import Operation from 'components/pages/Operation';
