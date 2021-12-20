@@ -2,52 +2,40 @@
 
 .layout {
   &__footer {
-    // position: absolute;
-    width: 100vw;
-    height: 35vh;
-    left: 0px;
-    top: 0px;
-
     background: $black;
+    height: 35vh;
+    left: 0;
+    top: 0;
+    width: 100vw;
 
     &__content {
-      flex: 1 1 0%;
+      color: $white;
       display: grid;
-      grid-template-columns: repeat(4, minmax(150px, 1fr)); 
-      padding-left: 0px; 
-      padding-right: 0px;
-      justify-content: space-between;
-
+      flex: 1;
       font-family: Poppins;
+      font-size: 15px;
       font-style: normal;
       font-weight: 600;
-      font-size: 15px;
+      grid-template-columns: repeat(4, minmax(150px, 1fr));
+      justify-content: space-between;
       line-height: 22px;
-
-      /* --color-white */
-      color: $white;
+      padding-left: 0;
+      padding-right: 0;
     }
 
     &__copyright {
-      font-family: Montserrat;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 13px;
-      line-height: 16px;
-
-      /* --color-white */
+      align-self: stretch;
+      border-top: 1px solid rgb(255 255 255 / 10%);
       color: $white;
-
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      flex: none;
+      flex-grow: 0;
+      font-family: "Montserrat Regular";
+      font-size: 13px;
+      font-weight: normal;
+      line-height: 16px;
+      margin: 30px 0;
       margin-top: 60px;
       padding-top: 20px;
-
-      /* Inside Auto Layout */
-      flex: none;
-      order: 0;
-      align-self: stretch;
-      flex-grow: 0;
-      margin: 30px 0px;
     }
   }
 }

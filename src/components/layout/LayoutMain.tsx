@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import { DesktopOutlined, PieChartOutlined, FileOutlined, TeamOutlined, UserOutlined } from '@ant-design/icons';
-
 import { Layout, Menu } from 'antd';
 import { useCommHook } from 'hooks/comm-hook';
 
@@ -28,15 +26,14 @@ const LayoutMain: React.FC = () => {
           <div className="icon">
             <Svgs iconName="WemixLogo" />
           </div>
-          <div className="title">WEMIX DEX</div>
+          <div className="title">WEMIXswap</div>
 
-          {/* <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-            <Menu.Item key="1">nav 1</Menu.Item>
-            <Menu.Item key="2">nav 2</Menu.Item>
-            <Menu.Item key="3">nav 3</Menu.Item>
-          </Menu> */}
-
-          <div className="layout__main__nav">
+          <div className="nav">
+            <Menu className="nav" theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
+              <Menu.Item key="1">nav 1</Menu.Item>
+              <Menu.Item key="2">nav 2</Menu.Item>
+              <Menu.Item key="3">nav 3</Menu.Item>
+            </Menu>
             {/* <div className="">
               <Svgs iconName="NavShop" />
             </div> */}
@@ -49,7 +46,7 @@ const LayoutMain: React.FC = () => {
           </div>
         </Header>
 
-        <Content className="layout__main__content">
+        <Content className="content">
           <div style={{ padding: 24, minHeight: 360 }}>MAIN CONTENT</div>
         </Content>
 
