@@ -1,0 +1,11 @@
+@import "styles/helper/variables";
+
+.nav {
+  &__menu {
+    font-family: "Montserrat Bold";
+    font-size: 1.6rem;
+    font-style: bold;
+    font-weight: bold;
+    letter-spacing: 0.2px;
+  }
+}

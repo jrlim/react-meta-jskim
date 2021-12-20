@@ -10,17 +10,23 @@ import relativeTime from 'dayjs/plugin/relativeTime';
 import moment from 'moment';
 import * as smoothscroll from 'smoothscroll-polyfill';
 // import i18n from './utils/i18n';
+import i18n from 'helper/i18n';
 
 import 'styles/index.scss';
 import 'antd/dist/antd.css';
 
 import App from './App';
 
-dayjs.extend(relativeTime);
-dayjs.locale('ko');
-// dayjs.locale(i18n.language);
+// console.info(i18n);
+// console.warn(i18n.language);
 
-moment.locale('ko');
+dayjs.extend(relativeTime);
+dayjs.locale(i18n.language);
+
+moment.locale(i18n.language);
+
+window.dayjs = dayjs;
+window.moment = moment;
 
 smoothscroll.polyfill();
 

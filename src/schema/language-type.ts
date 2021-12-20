@@ -3,3 +3,8 @@ export declare type LanguageType = {
   en: string;
   ko: string;
 };
+
+export declare type LanguageComboType = {
+  label: string;
+  value: string;
+};
