@@ -29,6 +29,14 @@ import {
 } from '@ant-design/icons';
 // Custom Icons
 import { ReactComponent as WemixLogo } from 'assets/svgs/wemix-logo.svg';
+import { ReactComponent as NavAsset } from 'assets/svgs/nav-asset.svg';
+import { ReactComponent as NavSwap } from 'assets/svgs/nav-swap.svg';
+import { ReactComponent as NavPool } from 'assets/svgs/nav-pool.svg';
+import { ReactComponent as NavStaking } from 'assets/svgs/nav-staking.svg';
+import { ReactComponent as NavWallet } from 'assets/svgs/nav-wallet.svg';
+import { ReactComponent as NavUser } from 'assets/svgs/nav-user.svg';
+import { ReactComponent as NavSelect } from 'assets/svgs/nav-select.svg';
+import { ReactComponent as NavLang } from 'assets/svgs/nav-lang.svg';
 import { ReactComponent as NavShop } from 'assets/svgs/nav-shop.svg';
 import { ReactComponent as SnsWemix } from 'assets/svgs/sns-wemix.svg';
 import { ReactComponent as SnsMedium } from 'assets/svgs/sns-medium.svg';
@@ -83,6 +91,14 @@ const Svgs: React.FC<ISvgs> = (props: ISvgs) => {
     // Custom Icons
     const svgIcons = {
       WemixLogo: <WemixLogo className={iconClassName} />,
+      NavAsset: <NavAsset className={iconClassName} />,
+      NavSwap: <NavSwap className={iconClassName} />,
+      NavPool: <NavPool className={iconClassName} />,
+      NavStaking: <NavStaking className={iconClassName} />,
+      NavWallet: <NavWallet className={iconClassName} />,
+      NavUser: <NavUser className={iconClassName} />,
+      NavSelect: <NavSelect className={iconClassName} />,
+      NavLang: <NavLang className={iconClassName} />,
       NavShop: <NavShop className={iconClassName} />,
       SnsWemix: <SnsWemix className={iconClassName} />,
       SnsTwitter: <SnsTwitter className={iconClassName} />,
