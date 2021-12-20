@@ -1,41 +1,49 @@
 @import "styles/helper/variables";
 
-.layout {
-  &__footer {
-    background: $black;
-    height: 35vh;
-    left: 0;
-    top: 0;
-    width: 100vw;
+.footer {
+  background: $black;
+  display: flex;
+  flex-wrap: wrap;
+  height: 35vh;
+  left: 0;
+  top: 0;
+  width: 100vw;
 
-    &__content {
-      color: $white;
-      display: grid;
-      flex: 1;
-      font-family: Poppins;
-      font-size: 15px;
-      font-style: normal;
-      font-weight: 600;
-      grid-template-columns: repeat(4, minmax(150px, 1fr));
-      justify-content: space-between;
-      line-height: 22px;
-      padding-left: 0;
-      padding-right: 0;
-    }
+  &__content {
+    color: $white;
+    display: grid;
+    flex: 1;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+    justify-content: space-between;
+    line-height: 22px;
+    padding-left: 0;
+    padding-right: 0;
+  }
 
-    &__copyright {
-      align-self: stretch;
-      border-top: 1px solid rgb(255 255 255 / 10%);
-      color: $white;
-      flex: none;
-      flex-grow: 0;
-      font-family: "Montserrat Regular";
-      font-size: 13px;
-      font-weight: normal;
-      line-height: 16px;
-      margin: 30px 0;
-      margin-top: 60px;
-      padding-top: 20px;
-    }
+  &__sns {
+    color: $white;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(4, 42px);
+    width: 213px;
+  }
+
+  &__copyright {
+    align-self: stretch;
+    border-top: 1px solid rgb(255 255 255 / 10%);
+    color: $white;
+    flex: none;
+    flex-grow: 0;
+    font-family: "Montserrat Regular";
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 16px;
+    margin: 30px 0;
+    margin-top: 60px;
+    padding-top: 20px;
   }
 }

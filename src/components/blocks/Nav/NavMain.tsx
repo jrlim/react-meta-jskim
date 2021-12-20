@@ -45,6 +45,7 @@ const NavMain: React.FC = () => {
           <Svgs iconName="NavSelect" />
         </Menu.Item>
         <Menu.Item key="9">
+          {/* TODO: 추후 SubMenu scss override 예정 */}
           <SubMenu key="sub_lang" icon={<GlobalOutlined />} title="">
             {languages.map((language: LanguageComboType) => {
               return (

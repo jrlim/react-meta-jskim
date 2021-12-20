@@ -26,11 +26,11 @@ i18n
       en: {
         translation: en
       },
-      cn: {
-        translation: cn
-      },
       ko: {
         translation: ko
+      },
+      cn: {
+        translation: cn
       }
     },
     fallbackLng: 'en',
