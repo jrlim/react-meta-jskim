@@ -32,9 +32,9 @@ const LayoutMain: React.FC = () => {
       </Header>
 
       <Content className="content">
-        <div style={{ padding: 24, minHeight: 360 }}>
+        <main style={{ padding: 24, minHeight: 360 }}>
           <Outlet />
-        </div>
+        </main>
       </Content>
 
       <FooterMain />

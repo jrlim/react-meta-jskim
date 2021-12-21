@@ -5,6 +5,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import en from '../i18n/en.json';
 import ko from '../i18n/ko.json';
 import cn from '../i18n/cn.json';
+import tw from '../i18n/tw.json';
 
 const languageDetector = new LanguageDetector();
 
@@ -31,6 +32,9 @@ i18n
       },
       cn: {
         translation: cn
+      },
+      tw: {
+        translation: tw
       }
     },
     fallbackLng: 'en',

@@ -11,7 +11,7 @@ const { Footer } = Layout;
 
 const FooterMain: React.FC = () => {
   return (
-    <Footer className="footer" style={{ textAlign: 'center' }}>
+    <Footer className="footer">
       <FooterContent />
       <FooterSns />
       <FooterCopyright />

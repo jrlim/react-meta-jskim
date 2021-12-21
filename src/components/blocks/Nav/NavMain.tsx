@@ -10,10 +10,12 @@ import './NavMain.scss';
 
 const { SubMenu } = Menu;
 
+/* TODO: global store로 변경 예정 */
 const languages: LanguageComboType[] = [
   { label: 'English', value: 'en' },
   { label: '한국어', value: 'ko' },
-  { label: '中文', value: 'cn' }
+  { label: '简体中文', value: 'cn' },
+  { label: '繁體中文', value: 'tw' }
 ];
 
 const NavMain: React.FC = () => {

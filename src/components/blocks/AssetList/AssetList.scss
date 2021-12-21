@@ -1,0 +1,24 @@
+.asset-list {
+  border: 0 solid rgb(140 140 140 / 35%);
+  height: 39vh;
+  margin-right: 0;
+  margin-top: 70px;
+  overflow: auto;
+  padding: 0 16px;
+  width: 96.2vw;
+
+  .ant-list-item {
+    border-top: 0.5px solid rgb(0 0 0 / 20%);
+    padding-left: 26px;
+  }
+
+  &__button-group {
+    margin-right: 11px;
+    padding-right: 20px;
+    button {
+      border-radius: 5px;
+      font-family: "Montserrat Bold";
+      margin-right: 5px;
+    }
+  }
+}
