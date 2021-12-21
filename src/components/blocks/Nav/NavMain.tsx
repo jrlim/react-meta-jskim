@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { Menu } from 'antd';
 import { GlobalOutlined } from '@ant-design/icons';
 import useWemixTranslation from 'hooks/useWemixTranslation';
@@ -25,29 +25,37 @@ const NavMain: React.FC = () => {
         <Menu.Item key="3">
           <Svgs iconName="NavAsset" />
           <NavLink to="/main/my-asset">
-            <em className="nav__menu__title">{$t('header.key3')}</em>
+            <span className="nav__menu__title">{$t('header.key3')}</span>
           </NavLink>
         </Menu.Item>
         <Menu.Item key="4">
           <Svgs iconName="NavSwap" />
-          <Link to="/main/swap">{$t('header.key4')}</Link>
+          <NavLink to="/main/swap">
+            <span className="nav__menu__title">{$t('header.key4')}</span>
+          </NavLink>
         </Menu.Item>
         <Menu.Item key="5">
           <Svgs iconName="NavPool" />
-          <Link to="/main/pool">{$t('header.key5')}</Link>
+          <NavLink to="/main/pool">
+            <span className="nav__menu__title">{$t('header.key5')}</span>
+          </NavLink>
         </Menu.Item>
         <Menu.Item key="6">
           <Svgs iconName="NavStaking" />
-          <Link to="/main/staking">{$t('header.key6')}</Link>
+          <NavLink to="/main/staking">
+            <span className="nav__menu__title">{$t('header.key6')}</span>
+          </NavLink>
         </Menu.Item>
         <Menu.Item key="7">
-          <Link to="/main/wallet">
+          <NavLink to="/main/wallet">
             <Svgs iconName="NavWallet" />
-          </Link>
+          </NavLink>
         </Menu.Item>
         <Menu.Item key="8">
           <Svgs iconName="NavUser" />
-          <Link to="/main/user">Josh</Link>
+          <NavLink to="/main/user">
+            <span className="nav__menu__title">Josh</span>
+          </NavLink>
           {/* <Svgs iconName="NavSelect" /> */}
         </Menu.Item>
         {/* TODO: Render 오류 수정 예정 추후 SubMenu scss override 예정 */}

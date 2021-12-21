@@ -2,20 +2,10 @@ import React, { Suspense, ReactElement } from 'react';
 import { Result } from 'antd';
 import { HashRouter as Router, Routes, Route, Navigate, useLocation, RouteProps } from 'react-router-dom';
 
+// import WebMainPage from 'components/blocks/WebMain';
 import Loading from 'components/atom/Loding';
-
-import LoginPage from 'components/pages/Login';
-import WebMainPage from 'components/blocks/WebMain';
 import LayoutMain from 'components/layout/LayoutMain';
-
-import DashboardOperation from 'components/pages/DashboardOperation';
-import Operation from 'components/pages/Operation';
-import MyAsset from 'components/pages/MyAsset';
-import Swap from 'components/pages/Swap';
-import Pool from 'components/pages/Pool';
-import Staking from 'components/pages/Staking';
-import Wallet from 'components/pages/Wallet';
-import User from 'components/pages/User';
+import { NotFound, Landing, MyAsset, Swap, Pool, Staking, Wallet, User } from 'components/pages';
 
 /**
  * route 변경 시, 디버깅 확인
@@ -40,11 +30,10 @@ const router: React.FC = () => {
       <Router>
         <DebugRouter>
           <Routes>
-            <Route path="/" element={<Navigate to="/main" />} />
+            <Route path="/" element={<Navigate to="/main/landing" />} />
             {/* <Route path="/login" element={<LoginPage />} /> */}
             <Route path="main" element={<LayoutMain />}>
-              <Route path="dashboard-operation" element={<DashboardOperation />} />
-              <Route path="operation" element={<Operation />} />
+              <Route path="landing" element={<Landing />} />
               <Route path="my-asset" element={<MyAsset />} />
               <Route path="swap" element={<Swap />} />
               <Route path="pool" element={<Pool />} />
@@ -53,10 +42,7 @@ const router: React.FC = () => {
               <Route path="user" element={<User />} />
             </Route>
 
-            <Route
-              path="/*"
-              element={<Result status="warning" title="페이지를 찾을 수 없습니다." style={{ marginTop: '26vh' }} />}
-            />
+            <Route path="/*" element={<NotFound />} />
           </Routes>
         </DebugRouter>
       </Router>

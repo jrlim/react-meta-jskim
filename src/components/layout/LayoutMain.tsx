@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
+import { Outlet } from 'react-router-dom';
 import { Layout } from 'antd';
-import { GlobalOutlined } from '@ant-design/icons';
 import { useCommHook } from 'hooks/comm-hook';
 
 import Svgs from 'components/atom/Svgs';
@@ -17,7 +17,7 @@ const LayoutMain: React.FC = () => {
 
   const { FetchRouter } = useCommHook();
 
-  const onCollapse = (collapsed: boolean) => {
+  const onCollapse = (collapsed: boolean): void => {
     setCollapsed(collapsed);
   };
 
@@ -32,7 +32,9 @@ const LayoutMain: React.FC = () => {
       </Header>
 
       <Content className="content">
-        <div style={{ padding: 24, minHeight: 360 }}>MAIN CONTENT</div>
+        <div style={{ padding: 24, minHeight: 360 }}>
+          <Outlet />
+        </div>
       </Content>
 
       <FooterMain />
