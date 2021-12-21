@@ -1,6 +1,6 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, ReactElement } from 'react';
 import { Result } from 'antd';
-import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate, useLocation, RouteProps } from 'react-router-dom';
 
 import Loading from 'components/atom/Loding';
 
@@ -11,23 +11,42 @@ import LayoutMain from 'components/layout/LayoutMain';
 import DashboardOperation from 'components/pages/DashboardOperation';
 import Operation from 'components/pages/Operation';
 
+/**
+ * route 변경 시, 디버깅 확인
+ * @param param
+ * @returns
+ */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const DebugRouter = ({ children }: { children: any }) => {
+  const location = useLocation();
+
+  if (process.env.NODE_ENV === 'development') {
+    console.log(`children ---> `, children);
+    console.log(`Route: ${location.pathname}${location.search}, State: ${JSON.stringify(location.state)}`);
+  }
+
+  return children;
+};
+
 const router: React.FC = () => {
   return (
     <Suspense fallback={<Loading />}>
       <Router>
-        <Routes>
-          <Route path="/" element={<Navigate to="/main" />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/main" element={<LayoutMain />}>
-            <Route path="dashboard-operation" element={<DashboardOperation />} />
-            <Route path="operation" element={<Operation />} />
-          </Route>
+        <DebugRouter>
+          <Routes>
+            <Route path="/" element={<Navigate to="/main" />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/main" element={<LayoutMain />}>
+              <Route path="dashboard-operation" element={<DashboardOperation />} />
+              <Route path="operation" element={<Operation />} />
+            </Route>
 
-          <Route
-            path="/*"
-            element={<Result status="warning" title="페이지를 찾을 수 없습니다." style={{ marginTop: '26vh' }} />}
-          />
-        </Routes>
+            <Route
+              path="/*"
+              element={<Result status="warning" title="페이지를 찾을 수 없습니다." style={{ marginTop: '26vh' }} />}
+            />
+          </Routes>
+        </DebugRouter>
       </Router>
     </Suspense>
   );

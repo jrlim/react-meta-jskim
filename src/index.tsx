@@ -1,34 +1,35 @@
+/** import global modules */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { store } from 'stores';
-
+import * as smoothscroll from 'smoothscroll-polyfill';
 import dayjs from 'dayjs';
 import 'dayjs/locale/ko';
 import relativeTime from 'dayjs/plugin/relativeTime';
-
 import moment from 'moment';
-import * as smoothscroll from 'smoothscroll-polyfill';
-// import i18n from './utils/i18n';
+
+/** import application modules */
+import { store } from 'stores';
 import i18n from 'helper/i18n';
 
+/** import global styles */
 import 'styles/index.scss';
 import 'antd/dist/antd.css';
 
+/** import main application */
 import App from './App';
 
-// console.info(i18n);
-// console.warn(i18n.language);
-
+/** initialize global modules */
+smoothscroll.polyfill();
 dayjs.extend(relativeTime);
 dayjs.locale(i18n.language);
-
 moment.locale(i18n.language);
 
-window.dayjs = dayjs;
-window.moment = moment;
-
-smoothscroll.polyfill();
+/** for development */
+if (process.env.NODE_ENV === 'development') {
+  window.dayjs = dayjs;
+  window.moment = moment;
+}
 
 ReactDOM.render(
   <Provider store={store}>
