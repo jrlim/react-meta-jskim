@@ -10,6 +10,12 @@ import LayoutMain from 'components/layout/LayoutMain';
 
 import DashboardOperation from 'components/pages/DashboardOperation';
 import Operation from 'components/pages/Operation';
+import MyAsset from 'components/pages/MyAsset';
+import Swap from 'components/pages/Swap';
+import Pool from 'components/pages/Pool';
+import Staking from 'components/pages/Staking';
+import Wallet from 'components/pages/Wallet';
+import User from 'components/pages/User';
 
 /**
  * route 변경 시, 디버깅 확인
@@ -35,10 +41,16 @@ const router: React.FC = () => {
         <DebugRouter>
           <Routes>
             <Route path="/" element={<Navigate to="/main" />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/main" element={<LayoutMain />}>
+            {/* <Route path="/login" element={<LoginPage />} /> */}
+            <Route path="main" element={<LayoutMain />}>
               <Route path="dashboard-operation" element={<DashboardOperation />} />
               <Route path="operation" element={<Operation />} />
+              <Route path="my-asset" element={<MyAsset />} />
+              <Route path="swap" element={<Swap />} />
+              <Route path="pool" element={<Pool />} />
+              <Route path="staking" element={<Staking />} />
+              <Route path="wallet" element={<Wallet />} />
+              <Route path="user" element={<User />} />
             </Route>
 
             <Route

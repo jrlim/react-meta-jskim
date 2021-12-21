@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import { Menu } from 'antd';
 import { GlobalOutlined } from '@ant-design/icons';
 import useWemixTranslation from 'hooks/useWemixTranslation';
@@ -23,27 +24,31 @@ const NavMain: React.FC = () => {
       <Menu className="nav__menu" theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
         <Menu.Item key="3">
           <Svgs iconName="NavAsset" />
-          {$t('header.key3')}
+          <NavLink to="/main/my-asset">
+            <em className="nav__menu__title">{$t('header.key3')}</em>
+          </NavLink>
         </Menu.Item>
         <Menu.Item key="4">
           <Svgs iconName="NavSwap" />
-          {$t('header.key4')}
+          <Link to="/main/swap">{$t('header.key4')}</Link>
         </Menu.Item>
         <Menu.Item key="5">
           <Svgs iconName="NavPool" />
-          {$t('header.key5')}
+          <Link to="/main/pool">{$t('header.key5')}</Link>
         </Menu.Item>
         <Menu.Item key="6">
           <Svgs iconName="NavStaking" />
-          {$t('header.key6')}
+          <Link to="/main/staking">{$t('header.key6')}</Link>
         </Menu.Item>
         <Menu.Item key="7">
-          <Svgs iconName="NavWallet" />
+          <Link to="/main/wallet">
+            <Svgs iconName="NavWallet" />
+          </Link>
         </Menu.Item>
         <Menu.Item key="8">
           <Svgs iconName="NavUser" />
-          Josh
-          <Svgs iconName="NavSelect" />
+          <Link to="/main/user">Josh</Link>
+          {/* <Svgs iconName="NavSelect" /> */}
         </Menu.Item>
         {/* TODO: Render 오류 수정 예정 추후 SubMenu scss override 예정 */}
         <Menu.Item key="9">

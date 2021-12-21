@@ -11,7 +11,7 @@
 .ant-menu-item-active {
   background-color: $grey-gradient03 !important;
 }
-.ant-menu-item-selected {
+.ant-menu-item-selected, .ant-menu-sub-item-selected {
   background-color: $active-color-menu !important;
   font-size: 1.7rem !important;
 }
