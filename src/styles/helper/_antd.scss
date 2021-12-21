@@ -1,5 +1,13 @@
 @import "./variables";
 
+.ant-menu.ant-menu-dark, .ant-menu-dark .ant-menu-sub, .ant-menu.ant-menu-dark .ant-menu-sub {
+  background: $black !important;
+  font-family: "Montserrat Bold";
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+}
+
 .ant-menu-item-active {
   background-color: $grey-gradient03 !important;
 }

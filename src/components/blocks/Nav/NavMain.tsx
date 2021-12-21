@@ -4,6 +4,7 @@ import { GlobalOutlined } from '@ant-design/icons';
 import useWemixTranslation from 'hooks/useWemixTranslation';
 import Svgs from 'components/atom/Svgs';
 import { LanguageComboType } from 'schema/language-type';
+
 import './NavMain.scss';
 
 const { SubMenu } = Menu;

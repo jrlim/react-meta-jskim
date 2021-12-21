@@ -4,6 +4,7 @@ import './FooterMain.scss';
 const FooterContent: React.FC = () => {
   return (
     <div className="footer__content">
+      {/* TODO: 재작업예정 */}
       <div>서비스소개</div>
       <div>고객지원</div>
       <div>파트너</div>
