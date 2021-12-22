@@ -5,7 +5,7 @@ import { HashRouter as Router, Routes, Route, Navigate, useLocation, RouteProps 
 // import WebMainPage from 'components/blocks/WebMain';
 import Loading from 'components/atom/Loding';
 import LayoutMain from 'components/layout/LayoutMain';
-import { NotFound, Landing, MyAsset, Swap, Pool, Staking, Wallet, User } from 'components/pages';
+import { Dev, NotFound, Landing, MyAsset, Swap, Pool, Staking, Wallet, User } from 'components/pages';
 
 /**
  * route 변경 시, 디버깅 확인
@@ -31,6 +31,7 @@ const router: React.FC = () => {
         <DebugRouter>
           <Routes>
             <Route path="/" element={<Navigate to="/main/landing" />} />
+            <Route path="dev" element={<Dev />} />
             {/* <Route path="/login" element={<LoginPage />} /> */}
             <Route path="main" element={<LayoutMain />}>
               <Route path="landing" element={<Landing />} />

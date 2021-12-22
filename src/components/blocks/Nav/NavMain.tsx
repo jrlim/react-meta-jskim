@@ -26,37 +26,37 @@ const NavMain: React.FC = () => {
       <Menu className="nav__menu" theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
         <Menu.Item key="3">
           <Svgs iconName="NavAsset" />
-          <NavLink to="/main/my-asset">
-            <span className="nav__menu__title">{$t('header.key3')}</span>
+          <NavLink to="/main/my-asset" className="nav__menu__title">
+            {$t('header.key3')}
           </NavLink>
         </Menu.Item>
         <Menu.Item key="4">
           <Svgs iconName="NavSwap" />
-          <NavLink to="/main/swap">
-            <span className="nav__menu__title">{$t('header.key4')}</span>
+          <NavLink to="/main/swap" className="nav__menu__title">
+            {$t('header.key4')}
           </NavLink>
         </Menu.Item>
         <Menu.Item key="5">
           <Svgs iconName="NavPool" />
-          <NavLink to="/main/pool">
-            <span className="nav__menu__title">{$t('header.key5')}</span>
+          <NavLink to="/main/pool" className="nav__menu__title">
+            {$t('header.key5')}
           </NavLink>
         </Menu.Item>
         <Menu.Item key="6">
           <Svgs iconName="NavStaking" />
-          <NavLink to="/main/staking">
-            <span className="nav__menu__title">{$t('header.key6')}</span>
+          <NavLink to="/main/staking" className="nav__menu__title">
+            {$t('header.key6')}
           </NavLink>
         </Menu.Item>
         <Menu.Item key="7">
-          <NavLink to="/main/wallet">
+          <NavLink to="/main/wallet" className="nav__menu__title">
             <Svgs iconName="NavWallet" />
           </NavLink>
         </Menu.Item>
         <Menu.Item key="8">
           <Svgs iconName="NavUser" />
-          <NavLink to="/main/user">
-            <span className="nav__menu__title">Josh</span>
+          <NavLink to="/main/user" className="nav__menu__title">
+            Josh
           </NavLink>
           {/* <Svgs iconName="NavSelect" /> */}
         </Menu.Item>

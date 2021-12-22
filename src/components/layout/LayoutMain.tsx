@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import { Layout } from 'antd';
 import { useCommHook } from 'hooks/comm-hook';
 
@@ -27,7 +27,9 @@ const LayoutMain: React.FC = () => {
         <div className="icon">
           <Svgs iconName="WemixLogo" />
         </div>
-        <div className="title">WEMIXswap</div>
+        <NavLink to="/main/landing">
+          <div className="title">WEMIXswap</div>
+        </NavLink>
         <NavMain />
       </Header>
 
