@@ -9,11 +9,20 @@
   &__header {
     background: $black;
 
+    /* display: flex; */
+
     /* TODO: header fixed 처리 추후 작업 예정 */
 
+    /* position: fixed;
+      width: 100%;
+      z-index: 1; */
+
     .icon {
+      /*       align-items: center; */
       color: $background-color-light-green;
       float: left;
+
+      /* display: flex; */
       font-size: 1.4rem;
       margin-left: 1rem;
       order: 1;
@@ -24,6 +33,14 @@
 
     .title {
       color: $white;
+
+      /* flex: none; */
+
+      /* align-items: center;
+      align-self: stretch;
+      flex-grow: 0;
+      display: flex; */
+
       float: left;
       font-family: "Montserrat Bold";
       font-size: 2rem;

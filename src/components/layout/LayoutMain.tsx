@@ -22,8 +22,8 @@ const LayoutMain: React.FC = () => {
   };
 
   return (
-    <Layout className="layout layout__main">
-      <Header className="layout__main__header">
+    <Layout className="layout">
+      <Header className="layout__header">
         <div className="icon">
           <Svgs iconName="WemixLogo" />
         </div>
@@ -31,10 +31,8 @@ const LayoutMain: React.FC = () => {
         <NavMain />
       </Header>
 
-      <Content className="content">
-        <main style={{ padding: 24, minHeight: 360 }}>
-          <Outlet />
-        </main>
+      <Content className="layout__content">
+        <Outlet />
       </Content>
 
       <FooterMain />

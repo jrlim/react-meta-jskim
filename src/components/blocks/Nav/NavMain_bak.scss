@@ -1,0 +1,48 @@
+@import "styles/helper/variables";
+
+/* .nav {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        height: 60px;
+        left: 0;
+        margin: auto;
+        order: 2;
+        padding: 11px 20px 9px;
+        position: static;
+        top: 0;
+        width: 70vw;
+
+        &__menu {
+          align-items: center;
+          background-color: $black;
+          display: flex;
+          height: 100%;
+          width: 100%;
+        }
+      } */
+
+.nav {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  left: 0;
+  margin: auto;
+  order: 2;
+  padding: 11px 20px 9px;
+  position: static;
+  top: 0;
+  width: 70vw;
+
+  &__menu {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+    &__title {
+      padding-left: 5px;
+    }
+  }
+}
