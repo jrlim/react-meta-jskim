@@ -1,0 +1,10 @@
+@import "styles/helper/variables";
+
+.modal-login {
+  color: $white;
+  width: unset !important;
+
+  .ant-modal-close-icon {
+    opacity: 0 !important;
+  }
+}

@@ -3,7 +3,7 @@ import { Result } from 'antd';
 import { HashRouter as Router, Routes, Route, Navigate, useLocation, RouteProps } from 'react-router-dom';
 
 // import WebMainPage from 'components/blocks/WebMain';
-import Loading from 'components/atom/Loading';
+import { Loading } from 'components/atom';
 import LayoutMain from 'components/layout/LayoutMain';
 import { Dev, NotFound, Landing, MyAsset, Swap, Pool, Staking, Wallet, User } from 'components/pages';
 
