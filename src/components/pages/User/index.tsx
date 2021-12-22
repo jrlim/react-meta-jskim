@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 
-import Loading from 'components/atom/Loding';
+import AssetListExample from 'components/blocks/AssetList/AssetListExample';
 
 const User: React.FC = () => {
-  return <div>User</div>;
+  return (
+    <div>
+      <AssetListExample />
+    </div>
+  );
 };
 
 export default User;

@@ -3,7 +3,7 @@ import { Result } from 'antd';
 import { HashRouter as Router, Routes, Route, Navigate, useLocation, RouteProps } from 'react-router-dom';
 
 // import WebMainPage from 'components/blocks/WebMain';
-import Loading from 'components/atom/Loding';
+import Loading from 'components/atom/Loading';
 import LayoutMain from 'components/layout/LayoutMain';
 import { Dev, NotFound, Landing, MyAsset, Swap, Pool, Staking, Wallet, User } from 'components/pages';
 
@@ -31,7 +31,6 @@ const router: React.FC = () => {
         <DebugRouter>
           <Routes>
             <Route path="/" element={<Navigate to="/main/landing" />} />
-            <Route path="dev" element={<Dev />} />
             {/* <Route path="/login" element={<LoginPage />} /> */}
             <Route path="main" element={<LayoutMain />}>
               <Route path="landing" element={<Landing />} />
@@ -41,6 +40,7 @@ const router: React.FC = () => {
               <Route path="staking" element={<Staking />} />
               <Route path="wallet" element={<Wallet />} />
               <Route path="user" element={<User />} />
+              <Route path="dev" element={<Dev />} />
             </Route>
 
             <Route path="/*" element={<NotFound />} />

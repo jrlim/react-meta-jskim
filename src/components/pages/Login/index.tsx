@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Loading from 'components/atom/Loding';
+import { Loading } from 'components/atom';
 
 import './index.scss';
 

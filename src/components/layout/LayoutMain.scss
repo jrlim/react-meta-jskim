@@ -8,18 +8,19 @@
 
   &__header {
     background: $black;
+    padding: 0 5px;
 
     /* TODO: header fixed 처리 추후 작업 예정 */
 
     .icon {
       color: $background-color-light-green;
       float: left;
-      font-size: 1.4rem;
-      margin-left: 1rem;
       order: 1;
-      position: static;
-      right: 0%;
-      top: 0%;
+
+      svg {
+        margin-left: 1rem;
+        margin-top: 1.65rem;
+      }
     }
 
     .title {
@@ -41,8 +42,9 @@
 
   &__content {
     background: $white;
+    height: 100vh;
     margin-top: 0;
-    min-height: 360px;
+    min-height: 45vh;
     overflow: auto;
     padding: 24px;
   }
