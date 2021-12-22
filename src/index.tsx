@@ -14,7 +14,7 @@ import i18n from 'helper/i18n';
 
 /** import global styles */
 import 'styles/index.scss';
-import 'antd/dist/antd.css';
+import 'antd/dist/antd.min.css';
 
 /** import main application */
 import App from './App';

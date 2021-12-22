@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { ComnModal } from 'components/atom';
+import { DevModal } from 'components/atom';
 import { Row, Col } from 'antd';
 
 const Dev: React.FC = () => {
@@ -10,7 +10,7 @@ const Dev: React.FC = () => {
         <Col span={24}>Dev</Col>
       </Row>
 
-      <ComnModal />
+      <DevModal />
     </div>
   );
 };

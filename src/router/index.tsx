@@ -17,7 +17,6 @@ const DebugRouter = ({ children }: { children: any }) => {
   const location = useLocation();
 
   if (process.env.NODE_ENV === 'development') {
-    console.log(`children ---> `, children);
     console.log(`Route: ${location.pathname}${location.search}, State: ${JSON.stringify(location.state)}`);
   }
 
