@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { DevModal, LoginModal } from 'components/atom';
+import { DevModal, LoginModal, TokenListModal } from 'components/blocks';
 import { Row, Col } from 'antd';
 
 const Dev: React.FC = () => {
@@ -16,6 +16,11 @@ const Dev: React.FC = () => {
       <br />
 
       <LoginModal />
+
+      <br />
+      <br />
+
+      <TokenListModal />
     </div>
   );
 };

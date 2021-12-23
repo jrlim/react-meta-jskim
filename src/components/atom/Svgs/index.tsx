@@ -1,6 +1,8 @@
 import React, { useCallback } from 'react';
 // Ant-design Icons
 import {
+  SearchOutlined,
+  AccountBookOutlined,
   DownOutlined,
   UpOutlined,
   LeftOutlined,
@@ -61,6 +63,8 @@ const Svgs: React.FC<ISvgs> = (props: ISvgs) => {
 
   const getIcon = useCallback((iconName: string, iconClassName?: string): JSX.Element => {
     const antdICons = {
+      SearchOutlined: <SearchOutlined />,
+      AccountBookOutlined: <AccountBookOutlined />,
       DownOutlined: <DownOutlined />,
       UpOutlined: <UpOutlined />,
       LeftOutlined: <LeftOutlined />,

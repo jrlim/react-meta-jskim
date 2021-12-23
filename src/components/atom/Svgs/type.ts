@@ -1,5 +1,7 @@
 export declare type IConNameType =
+  | 'SearchOutlined'
   | 'AccountBookOutlined'
+  | 'DownOutlined'
   | 'UpOutlined'
   | 'LeftOutlined'
   | 'RightOutlined'
