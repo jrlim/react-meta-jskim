@@ -1,27 +1,46 @@
 import React, { useState } from 'react';
+import { Tabs, Row, Col } from 'antd';
 
 import { DevModal, LoginModal, TokenListModal } from 'components/blocks';
-import { Row, Col } from 'antd';
+import TestAuction from './Example/API/TestAuction';
+
+const { TabPane } = Tabs;
+
+function callback(key: string) {
+  console.log(key);
+}
 
 const Dev: React.FC = () => {
   return (
-    <div>
+    <section>
       <Row>
         <Col span={24}>Dev</Col>
       </Row>
-
-      <DevModal />
-
-      <br />
-      <br />
-
-      <LoginModal />
-
-      <br />
-      <br />
-
-      <TokenListModal />
-    </div>
+      <Tabs defaultActiveKey="1" onChange={callback}>
+        <TabPane tab="Modal" key="1">
+          <br />
+          <br />
+          <DevModal />
+          <br />
+          <br />
+          <LoginModal />
+          <br />
+          <br />
+          <TokenListModal />
+        </TabPane>
+        <TabPane tab="API" key="2">
+          Content of Tab Pane 2
+          <br />
+          <br />
+          <TestAuction />
+        </TabPane>
+        <TabPane tab="Else" key="3">
+          Content of Tab Pane 3
+          <br />
+          <br />
+        </TabPane>
+      </Tabs>
+    </section>
   );
 };
 

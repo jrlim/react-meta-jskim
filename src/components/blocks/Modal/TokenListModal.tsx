@@ -1,11 +1,8 @@
 import React, { useState, useCallback, useEffect } from 'react';
-import { Input, List, Modal, Avatar, Skeleton, Divider, Button } from 'antd';
+import { Input, List, Modal, Avatar, Skeleton, Divider, Button, BackTop } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { isString, size, chain, toUpper, includes, cloneDeep } from 'lodash';
-
-import { InputSearch } from 'components/atom';
-import { name } from '../../../stores/comm-store/initial';
 
 const TokenListModal: React.FC = () => {
   const [modalVisible, setModalVisible] = useState<boolean>(false);
@@ -13,6 +10,17 @@ const TokenListModal: React.FC = () => {
   const [originList, setOriginList] = useState<Array<JSONObject>>([]);
   const [tokenList, setTokenList] = useState<Array<JSONObject>>([]);
   const [keyword, setKeyword] = useState<string>('');
+
+  const backTopStyle = {
+    height: 40,
+    width: 40,
+    lineHeight: '40px',
+    borderRadius: 4,
+    backgroundColor: '#1088e9',
+    color: '#fff',
+    TextAlign: 'center',
+    fontSize: 14
+  };
 
   function changeModalVisible(modal1Visible: boolean): void {
     setModalVisible(modal1Visible);
@@ -117,8 +125,11 @@ const TokenListModal: React.FC = () => {
                     />
                     <div className="">{`${item.volume}`}</div>
                   </List.Item>
-                )}
-              />
+                )}>
+                <BackTop>
+                  <div style={backTopStyle}>UP</div>
+                </BackTop>
+              </List>
             </InfiniteScroll>
           </section>
         </article>

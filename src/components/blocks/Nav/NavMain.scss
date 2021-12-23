@@ -5,6 +5,9 @@
 
   &__menu {
     /* TODO: 추가 작업 예정 */
+    display: flex;
+    justify-content: end;
+
     svg {
       /* margin-top: 1.9rem; */
     }
