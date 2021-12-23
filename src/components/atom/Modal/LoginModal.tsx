@@ -28,7 +28,7 @@ const LoginModal: React.FC = () => {
         로그인
       </Button>
       <Modal
-        className="modal-login"
+        className="modal__login"
         title={null}
         centered
         style={{ top: 20 }}
@@ -37,14 +37,15 @@ const LoginModal: React.FC = () => {
         onCancel={() => changemodalVisible(false)}
         bodyStyle={
           isFullScreen
-            ? { width: '100%', height: '100%', padding: '0px' }
+            ? { width: '100vw', height: '100vh', padding: '0px' }
             : { width: '400px', height: '800px', padding: '0px' }
         }
         footer={null}>
-        {isLoading && <Spin />}
+        {isLoading && <Spin className="modal__login__spin" size="large" />}
         <iframe
           onLoad={() => setIsLoading(false)}
-          style={isFullScreen ? { height: '100%', width: '100%' } : { width: 400, height: 800 }}
+          className="modal__login__iframe"
+          style={isFullScreen ? { width: '100vw', height: '100vh' } : { width: '400px', height: '800px' }}
           src={`${REACT_APP_WEB_AUTH_URL}/run`}
           frameBorder="0"
           title="web-auth"
