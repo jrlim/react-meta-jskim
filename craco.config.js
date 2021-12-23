@@ -2,15 +2,16 @@
 // src/craco.config.js
 const path = require('path');
 const CracoAlias = require('craco-alias');
+// const CracoLessPlugin = require('craco-less');
 
 module.exports = {
   webpack: {
     alias: {
-      '@': path.resolve(__dirname, 'src/'),
-      '~atom': path.resolve(__dirname, 'src/components/atom/'),
-      '~blocks': path.resolve(__dirname, 'src/components/blocks/'),
-      '~layout': path.resolve(__dirname, 'src/components/layout/'),
-      '~pages': path.resolve(__dirname, 'src/components/pages/')
+      '@': path.resolve(__dirname, 'src/*'),
+      '~atom': path.resolve(__dirname, 'src/components/atom/*'),
+      '~blocks': path.resolve(__dirname, 'src/components/blocks/*'),
+      '~layout': path.resolve(__dirname, 'src/components/layout/*'),
+      '~pages': path.resolve(__dirname, 'src/components/pages/*')
     }
   },
   plugins: [
@@ -28,5 +29,19 @@ module.exports = {
         tsConfigPath: 'tsconfig.paths.json'
       }
     }
+    // {
+    //   plugin: CracoLessPlugin,
+    //   options: {
+    //     lessLoaderOptions: {
+    //       lessOptions: {
+    //         modifyVars: {
+    //           '@primary-color': '#1DA57A',
+    //           '@font-family': '"Montserrat", "Montserrat Regular", "Montserrat Bold"'
+    //         },
+    //         javascriptEnabled: true
+    //       }
+    //     }
+    //   }
+    // }
   ]
 };

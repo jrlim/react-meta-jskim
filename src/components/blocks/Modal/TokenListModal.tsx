@@ -1,34 +1,69 @@
-import React, { useState, useEffect } from 'react';
-import { List, Modal, Avatar, Skeleton, Divider, Button } from 'antd';
+import React, { useState, useCallback, useEffect } from 'react';
+import { Input, List, Modal, Avatar, Skeleton, Divider, Button } from 'antd';
+import { SearchOutlined } from '@ant-design/icons';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import { isString, size, chain, toUpper, includes, cloneDeep } from 'lodash';
 
 import { InputSearch } from 'components/atom';
+import { name } from '../../../stores/comm-store/initial';
 
 const TokenListModal: React.FC = () => {
-  const [modalVisible, setModalVisible] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [data, setData] = useState([]);
+  const [modalVisible, setModalVisible] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [originList, setOriginList] = useState<Array<JSONObject>>([]);
+  const [tokenList, setTokenList] = useState<Array<JSONObject>>([]);
+  const [keyword, setKeyword] = useState<string>('');
 
-  function changeModalVisible(modal1Visible: boolean) {
+  function changeModalVisible(modal1Visible: boolean): void {
     setModalVisible(modal1Visible);
   }
 
-  const loadMoreData = () => {
+  function filteredData(key: string): void {
+    if (isString(key) && size(key) >= 2) {
+      const copyOriginList = cloneDeep(originList);
+      const filterList = copyOriginList.filter(item => {
+        let isContains = false;
+        const { symbol, name, address } = item;
+        if (address === key) {
+          isContains = true;
+        }
+        if (chain(symbol).toUpper().includes(key.toUpperCase()).value()) {
+          isContains = true;
+        }
+        if (chain(name).toUpper().includes(key.toUpperCase()).value()) {
+          isContains = true;
+        }
+        if (isContains) return item;
+        return undefined;
+      });
+      setTokenList([...filterList]);
+    } else {
+      setTokenList(cloneDeep(originList));
+    }
+  }
+
+  function onChangeKeyword(value: string): void {
+    // console.info(value);
+    setKeyword(keyword);
+    filteredData(value);
+  }
+
+  const loadMoreData = async () => {
     if (loading) {
       return;
     }
 
-    const mock = './mock/asset.json';
-
     setLoading(true);
-    fetch(mock)
+
+    fetch('./mock/asset.json')
       .then(res => {
         console.info(res);
         return res.json();
       })
       .then(body => {
         console.info(body);
-        setData([...data, ...body.results]);
+        setTokenList([...tokenList, ...body.results]);
+        setOriginList([...tokenList, ...body.results]);
         setLoading(false);
       })
       .catch(() => {
@@ -53,30 +88,40 @@ const TokenListModal: React.FC = () => {
         footer={null}
         onOk={() => changeModalVisible(false)}
         onCancel={() => changeModalVisible(false)}>
-        <InputSearch />
-        <section id="scrollable-area-token-list-modal" className="">
-          <InfiniteScroll
-            dataLength={data.length}
-            next={loadMoreData}
-            hasMore={data.length < 50}
-            loader={<Skeleton avatar paragraph={{ rows: 1 }} active />}
-            endMessage={<Divider plain> It is all, nothing more 🤐 </Divider>}
-            scrollableTarget="scrollable-area-token-list-modal">
-            <List
-              dataSource={data}
-              renderItem={item => (
-                <List.Item key={item.id} style={{ cursor: 'grab' }} onClick={() => changeModalVisible(false)}>
-                  <List.Item.Meta
-                    avatar={<Avatar src={item.image} />}
-                    title={item.name}
-                    description={`${item.symbol}`}
-                  />
-                  <div className="">{`${item.volume}`}</div>
-                </List.Item>
-              )}
+        <article>
+          <header>
+            <Input
+              size="large"
+              placeholder="코인명,심볼,토큰주소 검색"
+              prefix={<SearchOutlined />}
+              onChange={e => onChangeKeyword(e?.target?.value)}
             />
-          </InfiniteScroll>
-        </section>
+          </header>
+
+          <section id="scrollable-token-list-modal" className="">
+            <InfiniteScroll
+              dataLength={tokenList.length}
+              next={loadMoreData}
+              hasMore={tokenList.length < 50}
+              loader={<Skeleton avatar paragraph={{ rows: 1 }} active />}
+              endMessage={<Divider plain> It is all, nothing more 🤐 </Divider>}
+              scrollableTarget="scrollable-token-list-modal">
+              <List
+                dataSource={tokenList}
+                renderItem={(item, index) => (
+                  <List.Item key={index} style={{ cursor: 'grab' }} onClick={() => changeModalVisible(false)}>
+                    <List.Item.Meta
+                      avatar={<Avatar src={item.image} />}
+                      title={item.name}
+                      description={`${item.symbol}`}
+                    />
+                    <div className="">{`${item.volume}`}</div>
+                  </List.Item>
+                )}
+              />
+            </InfiniteScroll>
+          </section>
+        </article>
       </Modal>
     </>
   );

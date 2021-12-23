@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Spin, Modal, Button } from 'antd';
-import { Loading } from 'components/atom';
+import CONST from 'helper/constants';
 
 import './LoginModal.scss';
 
@@ -9,8 +9,8 @@ const { REACT_APP_WEB_AUTH_URL } = process.env;
 
 const LoginModal: React.FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [modalVisible, setmodalVisible] = useState(false);
-  const isFullScreen = useMediaQuery({ query: '(max-width:600px)' });
+  const [modalVisible, setmodalVisible] = useState<boolean>(false);
+  const isFullScreen = useMediaQuery({ query: CONST.SCSS.FULL_SCREEN_WIDTH });
 
   console.warn(`REACT_APP_WEB_AUTH_URL --->`, REACT_APP_WEB_AUTH_URL);
 
