@@ -44,6 +44,11 @@ import { ReactComponent as SnsWemix } from 'assets/svgs/sns-wemix.svg';
 import { ReactComponent as SnsMedium } from 'assets/svgs/sns-medium.svg';
 import { ReactComponent as SnsTwitter } from 'assets/svgs/sns-twitter.svg';
 import { ReactComponent as SnsTelegram } from 'assets/svgs/sns-telegram.svg';
+import { ReactComponent as PageAttention } from 'assets/svgs/page-attention.svg';
+import { ReactComponent as PageSwapSmall } from 'assets/svgs/page-swap-small.svg';
+import { ReactComponent as PageSwapBig } from 'assets/svgs/page-swap-big.svg';
+import { ReactComponent as TokenDefault } from 'assets/svgs/token-default.svg';
+import { ReactComponent as TokenWemixCredit } from 'assets/svgs/token-wemix-credit.svg';
 
 import { IConNameType } from './type';
 
@@ -107,7 +112,12 @@ const Svgs: React.FC<ISvgs> = (props: ISvgs) => {
       SnsWemix: <SnsWemix className={iconClassName} />,
       SnsTwitter: <SnsTwitter className={iconClassName} />,
       SnsMedium: <SnsMedium className={iconClassName} />,
-      SnsTelegram: <SnsTelegram className={iconClassName} />
+      SnsTelegram: <SnsTelegram className={iconClassName} />,
+      PageAttention: <PageAttention className={iconClassName} />,
+      PageSwapSmall: <PageSwapSmall className={iconClassName} />,
+      PageSwapBig: <PageSwapBig className={iconClassName} />,
+      TokenDefault: <TokenDefault className={iconClassName} />,
+      TokenWemixCredit: <TokenWemixCredit className={iconClassName} />
     };
 
     const icons = { ...antdICons, ...svgIcons };

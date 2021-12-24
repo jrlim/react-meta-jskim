@@ -41,4 +41,9 @@ export declare type IConNameType =
   | 'SnsWemix'
   | 'SnsTwitter'
   | 'SnsMedium'
-  | 'SnsTelegram';
+  | 'SnsTelegram'
+  | 'PageAttention'
+  | 'PageSwapSmall'
+  | 'PageSwapBig'
+  | 'TokenDefault'
+  | 'TokenWemixCredit';

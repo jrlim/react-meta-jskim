@@ -11,6 +11,10 @@ h1 {
     .ant-page-header {
       padding: unset;
     }
+
+    &__card {
+      /* display: flex; */
+    }
   }
 
   &__estimated {

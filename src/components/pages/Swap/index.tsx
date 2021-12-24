@@ -1,8 +1,23 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Row, Col, Typography, PageHeader, Tabs, Button, Statistic, Descriptions, Table, Divider } from 'antd';
+import {
+  Row,
+  Col,
+  Typography,
+  InputNumber,
+  Card,
+  PageHeader,
+  Tabs,
+  Tag,
+  Button,
+  Statistic,
+  Descriptions,
+  Table,
+  Divider
+} from 'antd';
 
 import './index.scss';
+import { Svgs } from 'components/atom';
 
 const { Title } = Typography;
 const { TabPane } = Tabs;
@@ -103,6 +118,40 @@ const Swap: React.FC = () => {
           </Col>
         </Row>
       </header>
+
+      <section className="swap__main">
+        <article>
+          <div>from</div>
+          <div>
+            <InputNumber type="text" placeholder="입금 가능금액!!" />
+            <Svgs iconName="TokenDefault" />
+          </div>
+          <span>
+            보유 15,213,666.123456 <Tag color="#0C81E0">MAX</Tag>
+          </span>
+        </article>
+        <article>
+          <div>to</div>
+          <div>
+            <InputNumber type="text" placeholder="입금 가능금액!!" />
+            <Svgs iconName="TokenDefault" />
+          </div>
+          <span>
+            보유 15,213,666.123456 <Tag color="#0C81E0">MAX</Tag>
+          </span>
+          <Card
+            hoverable
+            style={{ width: 300, height: 300, backgroundColor: '#0C81E0' }}
+            className="swap__main__card"
+            cover={<Svgs iconName="PageAttention" />}>
+            <Card.Meta title="" description="보유한 수량이 부족합니다." />
+            <Svgs iconName="PageSwapBig" iconClassName="" />
+            <div>SWAP</div>
+          </Card>
+        </article>
+      </section>
+
+      <Divider />
 
       <section className="swap__main">
         <PageHeader
