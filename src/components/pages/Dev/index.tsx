@@ -12,7 +12,7 @@ function callback(key: string) {
 
 const Dev: React.FC = () => {
   return (
-    <section>
+    <section style={{ height: '71vh;' }}>
       <Row>
         <Col span={24}>Dev</Col>
       </Row>

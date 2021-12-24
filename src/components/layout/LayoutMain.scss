@@ -5,6 +5,9 @@
   min-width: 320px;
   overflow-y: hidden;
   padding: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 
   &__header {
     background: $black;
@@ -45,7 +48,10 @@
     height: 100vh;
     margin-top: 0;
     min-height: 45vh;
+
+    /* TODO: Content scroll 활성화 및 Footer 고정 해제 */
     overflow: auto;
-    padding: 24px;
+
+    /* padding: 24px; */
   }
 }

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { EmptyPage } from 'components/blocks';
 
 const Landing: React.FC = () => {
-  return <div>Landing</div>;
+  return <EmptyPage title="Landing" />;
 };
 
 export default Landing;

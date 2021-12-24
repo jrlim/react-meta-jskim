@@ -33,11 +33,10 @@ const LayoutMain: React.FC = () => {
         <NavMain />
       </Header>
 
-      <Content className="layout__content">
+      <Content className="layout__content" id="scrollable-layout-conent">
         <Outlet />
+        <FooterMain />
       </Content>
-
-      <FooterMain />
     </Layout>
   );
 };

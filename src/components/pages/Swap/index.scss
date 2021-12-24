@@ -1,0 +1,19 @@
+@import "../../../styles/helper/mixin";
+
+h1 {
+  @include content-header-title;
+}
+
+.swap {
+  &__main {
+    padding: 0 24px;
+  }
+
+  &__estimated {
+    padding: 0 24px;
+  }
+
+  &__transaction {
+    padding: 0 24px;
+  }
+}

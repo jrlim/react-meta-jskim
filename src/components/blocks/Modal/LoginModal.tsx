@@ -22,6 +22,13 @@ const LoginModal: React.FC = () => {
     console.debug('onLoaded');
   }
 
+  function currStyle() {
+    if (isLoading) {
+      return { width: '400px', height: '0px' };
+    }
+    return isFullScreen ? { width: '100vw', height: '100vh' } : { width: '400px', height: '800px' };
+  }
+
   return (
     <>
       <Button type="primary" onClick={() => changemodalVisible(true)}>
@@ -45,7 +52,7 @@ const LoginModal: React.FC = () => {
         <iframe
           onLoad={() => setIsLoading(false)}
           className="modal-login__iframe"
-          style={isFullScreen ? { width: '100vw', height: '100vh' } : { width: '400px', height: '800px' }}
+          style={currStyle()}
           src={`${REACT_APP_WEB_AUTH_URL}/run`}
           frameBorder="0"
           title="web-auth"

@@ -30,8 +30,8 @@ const AssetListExample: React.FC = () => {
     <div
       id="scrollableDiv"
       style={{
-        height: '55vh',
-        minHeight: '51vh',
+        height: '71vh',
+        minHeight: '71vh',
         overflow: 'auto',
         padding: '0 16px',
         border: '1px solid rgba(140, 140, 140, 0.35)'
