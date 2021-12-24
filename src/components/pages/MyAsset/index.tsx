@@ -11,7 +11,7 @@ const MyAsset: React.FC = () => {
       <header>
         <Row>
           <Col span={18}>
-            <h1 className="asset-list-header">거래소 ↔ 내 지갑 간 간편하게 입출금 하세요.</h1>
+            <h1 className="content-header-title">거래소 ↔ 내 지갑 간 간편하게 입출금 하세요.</h1>
           </Col>
         </Row>
       </header>

@@ -1,9 +1,23 @@
 import React, { useState } from 'react';
+import { Grid, Tag } from 'antd';
+
 import './FooterMain.scss';
 
+const { useBreakpoint } = Grid;
+
 const FooterContent: React.FC = () => {
+  const screens = useBreakpoint();
+
+  if (screens.xs) {
+    console.debug('FooterContent --->', screens);
+  }
+
   return (
-    <div className="footer__content">
+    <div
+      className="footer__content"
+      style={{
+        gridTemplateColumns: screens.xs ? '1fr' : 'repeat(4, minmax(150px,1fr))'
+      }}>
       {/* TODO: 재작업예정 -> mobile 대응, 개별 grid parent / children 정의 필요!!! */}
       <div>서비스소개</div>
       <div>고객지원</div>
