@@ -34,7 +34,9 @@ const LayoutMain: React.FC = () => {
       </Header>
 
       <Content className="layout__content" id="scrollable-layout-conent">
-        <Outlet />
+        <main>
+          <Outlet />
+        </main>
         <FooterMain />
       </Content>
     </Layout>

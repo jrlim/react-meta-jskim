@@ -4,6 +4,7 @@ import {
   Row,
   Col,
   Typography,
+  Input,
   InputNumber,
   Card,
   PageHeader,
@@ -123,7 +124,7 @@ const Swap: React.FC = () => {
         <article>
           <div>from</div>
           <div>
-            <InputNumber type="text" placeholder="입금 가능금액!!" />
+            <Input type="text" placeholder="입금 가능금액!!" />
             <Svgs iconName="TokenDefault" />
           </div>
           <span>
@@ -133,17 +134,13 @@ const Swap: React.FC = () => {
         <article>
           <div>to</div>
           <div>
-            <InputNumber type="text" placeholder="입금 가능금액!!" />
+            <Input type="text" placeholder="입금 가능금액!!" />
             <Svgs iconName="TokenDefault" />
           </div>
           <span>
             보유 15,213,666.123456 <Tag color="#0C81E0">MAX</Tag>
           </span>
-          <Card
-            hoverable
-            style={{ width: 300, height: 300, backgroundColor: '#0C81E0' }}
-            className="swap__main__card"
-            cover={<Svgs iconName="PageAttention" />}>
+          <Card hoverable className="swap__main__card" cover={<Svgs iconName="PageAttention" />}>
             <Card.Meta title="" description="보유한 수량이 부족합니다." />
             <Svgs iconName="PageSwapBig" iconClassName="" />
             <div>SWAP</div>
@@ -194,17 +191,12 @@ const Swap: React.FC = () => {
       <Divider />
 
       <section className="swap__transaction">
-        <Title level={4}>transaction history</Title>
+        <Title level={4}>transaction history #1</Title>
         <Table columns={columns} dataSource={data} size="small" />
       </section>
 
       <section className="swap__transaction">
-        <Title level={4}>transaction history</Title>
-        <Table columns={columns} dataSource={data} size="small" />
-      </section>
-
-      <section className="swap__transaction">
-        <Title level={4}>transaction history</Title>
+        <Title level={4}>transaction history #2</Title>
         <Table columns={columns} dataSource={data} size="small" />
       </section>
     </article>
