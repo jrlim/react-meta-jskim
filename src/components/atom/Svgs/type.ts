@@ -46,4 +46,5 @@ export declare type IConNameType =
   | 'PageSwapSmall'
   | 'PageSwapBig'
   | 'TokenDefault'
+  | 'TokenWemix'
   | 'TokenWemixCredit';

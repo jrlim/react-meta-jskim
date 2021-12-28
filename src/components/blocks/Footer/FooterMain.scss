@@ -6,11 +6,8 @@
   flex-wrap: wrap;
 
   /* height: 35vh; */
-
-  left: 0;
   padding: 25px 66px;
-  top: 0;
-  width: 100vw;
+  width: 100%;
 
   &__content {
     /* TODO: 재작업예정 -> mobile 대응, 개별 grid parent / children 정의 필요!!! */
